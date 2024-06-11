@@ -1,0 +1,52 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datebase</title>
+    <link rel="stylesheet" href="{% static 'css/dataCreation.css' %}">
+</head>
+<body>
+
+    <div class="navbar">
+        <nav>
+            <ul>
+                <li><a href="/"><span>Trivia</span></a></li>
+                <li><a href="/creatorTools">Creator Tools</a></li>
+            </ul>
+        </nav>
+    </div>
+    <br><br>
+
+    <form action="" method="POST">
+        {%csrf_token%}
+        <h2>New Card</h2>
+        <input type="text" name="title" placeholder="Title">
+        <input type="number" name="year" placeholder="Year" step="1">
+        <input type="text" name="image" placeholder="link to image">
+        <input type="text" name="link" placeholder="Link">
+        <input type="text" name="information" placeholder="Information"><br><br>
+        <input type="submit" value="Create">
+    </form>
+
+    <div id="list">
+        <h2>Cards</h2>
+        <hr>
+        {%for item in data%}
+        <div class="listItem">
+            <div class="context">
+                <img src="{{item.pic}}" height="200" width="200">
+                <p>{{item.date}}</p>
+                <p>{{item.title}}</p>
+            </div>
+            <br>
+            <hr>
+            {%endfor%}
+        </div>
+        
+    </div>
+    <script src="{% static 'js/dataCreation.js' %}"></script>
+</body>
+</html>

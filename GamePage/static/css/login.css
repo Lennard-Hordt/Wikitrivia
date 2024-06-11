@@ -1,0 +1,25 @@
+li{
+    float: left;
+    list-style: none;
+    display: inline;
+}
+a{
+    display: block;
+    padding: 8px;
+}
+
+li a {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+
+form{
+    text-align: center;
+    position: relative;
+    top: 80px;
+    padding: 40px;
+}

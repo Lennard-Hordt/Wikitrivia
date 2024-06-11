@@ -1,0 +1,47 @@
+li{
+    float: left;
+    list-style: none;
+}
+a{
+    display: block;
+    padding: 8px;
+}
+li a {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+#currentObj{
+    text-align: center;
+}
+
+#timeline{
+    display: inline-grid;
+    gap: 20px;
+    overflow-x: auto;
+    max-width: 100vw;
+}
+
+#timeline button{
+    margin: 152px 0;
+    width: 45px;
+    border-radius: 100vmax;
+}
+
+.event-div{
+    background-color: lightgray;
+    border-radius: 1em;
+    text-align: center;
+    width: 200px;
+    padding: 1em;
+}
+
+
+#timeline * {
+    grid-row-start: 1;
+    grid-row-end: 1;
+}
+

@@ -1,0 +1,30 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+</head>
+
+<body>
+    <div class="navbar">
+        <nav>
+            <ul>
+                <li><a href="/"><span>Trivia</span></a></li>
+                {%if request.user.is_authenticated%}
+                <li><a href="/creatorTools/datacreation">Creator Tools</a></li>
+                {%else%}
+                <li><a href="/creatorTools">Creator Tools</a></li>
+                {%endif%}
+            </ul>
+        </nav>
+    </div> <br> <br> <br>
+    <div id="currentObj"></div>
+    <div id="timeline"></div>
+</body>
+</html>
+<script src="{% static 'js/index.js' %}"></script>
